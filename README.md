@@ -26,4 +26,12 @@ task install(dependsOn: uploadArchives)
 
 </pre>
 
-2) Para fazer deploy executar a task install.
+2) Adicionar no app/gradle.properties:
+
+<pre>
+POM_ARTIFACT_ID=mylib
+VERSION_NAME=0.0.1
+GROUP=br.com.livroandroid
+</pre>
+
+3) Para fazer deploy executar a task install.
