@@ -23,7 +23,6 @@ uploadArchives {
 }
 
 task install(dependsOn: uploadArchives)
-
 </pre>
 
 2) Adicionar no app/gradle.properties:
