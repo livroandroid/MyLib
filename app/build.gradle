@@ -1,5 +1,5 @@
 
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
 android {
@@ -21,7 +21,7 @@ android {
 uploadArchives {
     repositories {
         mavenDeployer {
-            //repository(url: "file:///R:/gradle/rep/")
+            //repository(url: "file:///C:/gradle/rep/")
             repository(url: "file:///home/ricardo/gradle/rep")
 
             pom.groupId = GROUP
@@ -34,6 +34,8 @@ task install(dependsOn: uploadArchives)
 
 /*
 No projeto:
+
+compile 'br.com.livroandroid:mylib:0.0.1'
 
 repositories {
     maven {
