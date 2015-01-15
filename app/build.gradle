@@ -2,6 +2,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
+configurations {
+    deployerJars
+}
+
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
@@ -21,8 +25,14 @@ android {
 uploadArchives {
     repositories {
         mavenDeployer {
+            configuration = configurations.deployerJars
+
             //repository(url: "file:///C:/gradle/rep/")
-            repository(url: "file:///home/ricardo/gradle/rep")
+            //repository(url: "file:///home/ricardo/gradle/rep")
+
+            repository(url: "http://localhost:8081/nexus/content/repositories/releases/"){
+                authentication(userName: "admin", password: "admin123")
+            }
 
             pom.groupId = GROUP
             pom.artifactId = POM_ARTIFACT_ID

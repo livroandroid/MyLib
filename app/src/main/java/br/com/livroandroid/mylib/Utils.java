@@ -8,7 +8,7 @@ import android.widget.Toast;
  */
 public class Utils {
     public static String hello() {
-        return "Hello World from Lib";
+        return "Hello World from Lib 0.0.3";
     }
 
     public static void toast(Context context, String msg) {
